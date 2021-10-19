@@ -1,0 +1,27 @@
+{
+  "name": "clembs-dark",
+  "displayName": "Clembs Dark",
+  "description": "my first vscode theme. i hope it'll look good.",
+  "scripts": {
+    "deploy": "nodemon index -q"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.61.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Clembs Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/clembs-dark-color-theme.json"
+      }
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": ["*.json"]
+  }
+}
