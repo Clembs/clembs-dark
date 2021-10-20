@@ -12,7 +12,7 @@
     "sideBarSectionHeader.foreground": "#c8c8c8",
     "editor.selectionBackground": "#c8c8c8",
     "list.activeSelectionBackground": "#c8c8c8",
-    "list.inactiveSelectionBackground": "#c8c8c8",
+    "list.inactiveSelectionBackground": "#8163ff",
     "focusBorder": "#c8c8c8",
     "tab.activeBackground": "#535353",
     "tab.inactiveBackground": "#191621",
@@ -30,13 +30,13 @@
         "foreground": "#ff0000"
       }
     },
+    {},
     {
-      "name": "Storage, Numbers, try...catch..., 'throw' and 'new'",
+      "name": "Storage, try...catch..., 'throw' and 'new'",
       "scope": [
         "storage",
         "keyword.control.trycatch",
         "keyword.operator.new",
-        "constant.numeric.decimal",
         "keyword.control.conditional",
         "keyword.control.export",
         "keyword.control.default",
@@ -50,6 +50,15 @@
       }
     },
     {
+      "name": "Numbers",
+      "scope": [
+        "constant.numeric.decimal"
+      ],
+      "settings": {
+        "foreground": "#00ec8c"
+      }
+    },
+    {
       "name": "Variables",
       "scope": [
         "variable",
@@ -60,12 +69,39 @@
       }
     },
     {
+      "name": "SCSS Variables",
+      "scope": [
+        "variable.scss"
+      ],
+      "settings": {
+        "foreground": "#ffbb00"
+      }
+    },
+    {
       "name": "Other Variable Properties",
       "scope": [
         "variable.other.property"
       ],
       "settings": {
-        "foreground": "#ff379b"
+        "foreground": "#c8c8c8"
+      }
+    },
+    {
+      "name": "TypeScript Interfaces",
+      "scope": [
+        "meta.interface"
+      ],
+      "settings": {
+        "foreground": "#4abcf3"
+      }
+    },
+    {
+      "name": "HTML Tags",
+      "scope": [
+        "entity.name.tag"
+      ],
+      "settings": {
+        "foreground": "#84ff8c"
       }
     },
     {
@@ -88,13 +124,79 @@
       }
     },
     {
-      "name": "=, ;, ++, -- and ||",
+      "name": "SCSS names",
+      "scope": [
+        "support.type.vendored.property-name.css"
+      ],
+      "settings": {
+        "foreground": "#ffbb00"
+      }
+    },
+    {
+      "name": "TypeScript types",
+      "scope": [
+        "meta.return.type"
+      ],
+      "settings": {
+        "foreground": "#ff379b",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "other TypeScript types?",
+      "scope": [
+        "entity.name.type"
+      ],
+      "settings": {
+        "foreground": "#4abcf3"
+      }
+    },
+    {
+      "name": "=, :, ++, -- and ||",
       "scope": [
         "keyword.operator.logical",
+        "keyword.operator.or",
         "keyword.operator.increment",
         "keyword.operator.decrement",
-        "punctuation.terminator",
-        "keyword.operator.assignment"
+        "keyword.operator.assignment",
+        "keyword.operator.type.annotation"
+      ],
+      "settings": {
+        "foreground": "#8163ff"
+      }
+    },
+    {
+      "name": "if, return, else, etc",
+      "scope": [
+        "keyword.control.flow",
+        "keyword.control.conditional"
+      ],
+      "settings": {
+        "foreground": "#8163ff"
+      }
+    },
+    {
+      "name": "HTML Attributes",
+      "scope": [
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "#f06bff"
+      }
+    },
+    {
+      "name": "Yarn Packages",
+      "scope": [
+        "entity.name.tag.yarn"
+      ],
+      "settings": {
+        "foreground": "#84ff8c"
+      }
+    },
+    {
+      "name": ";",
+      "scope": [
+        "punctuation.terminator"
       ],
       "settings": {
         "foreground": "#535353"
@@ -117,7 +219,7 @@
         "support.type.object.module"
       ],
       "settings": {
-        "foreground": "#00ec10"
+        "foreground": "#84ff8c"
       }
     },
     {
@@ -125,10 +227,11 @@
       "scope": [
         "string.key",
         "support.type.property-name",
-        "meta.object-literal.key"
+        "meta.object-literal.key",
+        "string.quoted.double"
       ],
       "settings": {
-        "foreground": "#00ec10"
+        "foreground": "#84ff8c"
       }
     },
     {
@@ -138,7 +241,7 @@
         "constant"
       ],
       "settings": {
-        "foreground": "#00ec10"
+        "foreground": "#84ff8c"
       }
     }
   ]

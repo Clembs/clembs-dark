@@ -14,7 +14,7 @@ const colors = {
     'sideBarSectionHeader.foreground': vars.text,
     'editor.selectionBackground': vars.text,
     'list.activeSelectionBackground': vars.text,
-    'list.inactiveSelectionBackground': vars.text,
+    'list.inactiveSelectionBackground': vars.purple,
     focusBorder: vars.text,
     'tab.activeBackground': vars.darkgrey,
     'tab.inactiveBackground': vars.background,
@@ -31,9 +31,7 @@ const colors = {
     //     fontStyle: 'bold',
     //   },
     // },
-    // Text Colouring
-
-    // Global
+    
     {
       name: 'Error Class',
       scope: ['support.class.error'],
@@ -42,12 +40,14 @@ const colors = {
       },
     },
     {
-      name: "Storage, Numbers, try...catch..., 'throw' and 'new'",
+      // 
+    },
+    {
+      name: "Storage, try...catch..., 'throw' and 'new'",
       scope: [
         'storage',
         'keyword.control.trycatch',
         'keyword.operator.new',
-        'constant.numeric.decimal',
         'keyword.control.conditional',
         'keyword.control.export',
         'keyword.control.default',
@@ -61,6 +61,13 @@ const colors = {
       },
     },
     {
+      name: 'Numbers',
+      scope: ['constant.numeric.decimal'],
+      settings: {
+        foreground: vars.turquoise,
+      }
+    },
+    {
       name: 'Variables',
       scope: ['variable', 'punctuation.definition'],
       settings: {
@@ -68,11 +75,33 @@ const colors = {
       },
     },
     {
+      // SCSS Variables
+      name: 'SCSS Variables',
+      scope: ['variable.scss'],
+      settings: {
+        foreground: vars.orange,
+      }
+    },
+    {
       name: 'Other Variable Properties',
       scope: ['variable.other.property'],
       settings: {
-        foreground: vars.pinkred,
+        foreground: vars.text,
       },
+    },
+    {
+      name: 'TypeScript Interfaces',
+      scope: ['meta.interface'],
+      settings: {
+        foreground: vars.blue,
+      }
+    },
+    {
+      name: 'HTML Tags',
+      scope: ['entity.name.tag'],
+      settings: {
+        foreground: vars.green,
+      }
     },
     {
       name: 'Functions',
@@ -89,17 +118,74 @@ const colors = {
       },
     },
     {
-      name: '=, ;, ++, -- and ||',
+      name: 'SCSS names',
+      scope: ['support.type.vendored.property-name.css'],
+      settings: {
+        foreground: vars.orange,
+      }
+    },
+    {
+      name: 'TypeScript types',
+      scope: ['meta.return.type'],
+      settings: {
+        foreground: vars.pinkred,
+        fontStyle: 'italic',
+      },
+    },
+    {
+      name: 'other TypeScript types?',
+      scope: ['entity.name.type'],
+      settings: {
+        foreground: vars.blue,
+      }
+    },
+    {
+      name: '=, :, ++, -- and ||',
       scope: [
         'keyword.operator.logical',
+        'keyword.operator.or',
         'keyword.operator.increment',
         'keyword.operator.decrement',
-        'punctuation.terminator',
         'keyword.operator.assignment',
+        'keyword.operator.type.annotation'
+      ],
+      settings: {
+        foreground: vars.purple,
+      },
+    },
+    {
+      name: 'if, return, else, etc',
+      scope: [
+        'keyword.control.flow',
+       'keyword.control.conditional'
+      ],
+      settings: {
+        foreground: vars.purple,
+      }
+    },
+    {
+      name: 'HTML Attributes',
+      scope: ['entity.other.attribute-name'],
+      settings: {
+        foreground: vars.pink,
+      }
+    },
+    {
+      // yarn.lock
+      name: 'Yarn Packages',
+      scope: ['entity.name.tag.yarn'],
+      settings: {
+        foreground: vars.green,
+      }
+    },
+    {
+      name: ';',
+      scope: [
+        'punctuation.terminator',
       ],
       settings: {
         foreground: vars.darkgrey,
-      },
+      }
     },
     {
       name: 'Comments',
@@ -118,10 +204,14 @@ const colors = {
     },
     {
       name: 'keys',
-      scope: ['string.key', 'support.type.property-name', 'meta.object-literal.key'],
+      scope: [
+        'string.key',
+        'support.type.property-name',
+        'meta.object-literal.key',
+        'string.quoted.double'
+      ],
       settings: {
         foreground: vars.green,
-        // fontStyle: 'bold',
       },
     },
     {
