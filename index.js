@@ -4,23 +4,39 @@ const colors = {
   name: 'clembs-dark',
   type: 'dark',
   colors: {
-    'editor.background': vars.background,
+    // the background of the editor
+    'editor.background': vars.lighterdarkpurple,
+    // general editor text
     'editor.foreground': vars.text,
-    'activityBarBadge.background': vars.pinkred,
-    'activityBar.background': vars.background,
+    // color of the activity bar badge (accent color)
+    'activityBarBadge.background': vars.brightpurple,
+    // background of the activity bar
+    'activityBar.background': vars.lighterdarkpurple,
+    // text of the sidebar
     'sideBarTitle.foreground': vars.text,
-    'sideBar.background': vars.background,
-    'sideBarSectionHeader.background': vars.background,
+    // background of the sidebar
+    'sideBar.background': vars.darkpurple,
+    // the small sections in the taskbar
+    'sideBarSectionHeader.background': vars.darkpurple,
+    // the small sections' text
     'sideBarSectionHeader.foreground': vars.text,
-    'editor.selectionBackground': vars.text,
-    'list.activeSelectionBackground': vars.text,
-    'list.inactiveSelectionBackground': vars.purple,
-    focusBorder: vars.text,
-    'tab.activeBackground': vars.darkgrey,
-    'tab.inactiveBackground': vars.background,
-    'tab.border': vars.background,
-    'titleBar.activeBackground': vars.background,
-    'editorGroupHeader.tabsBackground': vars.background,
+    // text selection in the editor
+    'editor.selectionBackground': vars.lighterdarkpurple,
+    // background of the files
+    'list.activeSelectionBackground': vars.lighterdarkpurple,
+
+    'list.inactiveSelectionBackground': vars.lighterdarkpurple,
+    
+    focusBorder: vars.lighterdarkpurple,
+
+    //selected tab
+    'tab.activeBackground': vars.lighterdarkpurple,
+    //inactive tab
+    'tab.inactiveBackground': vars.darkpurple,
+    // the tab seperators
+    'tab.border': vars.darkpurple,
+    'titleBar.activeBackground': vars.darkpurple,
+    'editorGroupHeader.tabsBackground': vars.darkpurple,
   },
   tokenColors: [
     // Text Styling
@@ -150,7 +166,7 @@ const colors = {
         'keyword.operator.type.annotation'
       ],
       settings: {
-        foreground: vars.purple,
+        foreground: vars.brightpurple,
       },
     },
     {
@@ -160,7 +176,7 @@ const colors = {
        'keyword.control.conditional'
       ],
       settings: {
-        foreground: vars.purple,
+        foreground: vars.brightpurple,
       }
     },
     {
@@ -232,3 +248,4 @@ JSON.stringify(colors, null, 2), { encoding: 'utf8' });
 
 console.clear();
 console.log("\x1b[32m%s\x1b[0m",'✓', 'Saved changes and reloaded theme!');
+
